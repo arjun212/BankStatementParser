@@ -7,6 +7,6 @@ print ""
 with open('statement.csv', 'rb') as f :
   reader = csv.reader(f)
   for row in reader :
-    if row[2] > 0 : 
-      print row[2]
+    if float(row[2]) > 0 : 
+      print row
 
