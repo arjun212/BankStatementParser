@@ -1,0 +1,60 @@
+### Sorting Algorithm Pseudocode
+
+//Each Category class will be user specific, as the user continues to use the software the number of Categories they have will grow.
+//LOOK INTO ENUMS FOR THIS <- SEMI PERMANENT STORAGE METHOD
+//STRING ENUMS, WHICH ARE THEN USED AS CLASS CONSTRUCTORS
+// ^^ THIS IS VERY VERY CLEVER ^^, Means only a list of string will be expanding
+Class Category {
+  name (string/ENUM)
+  transString (string)
+}
+
+e.g.
+
+Category {
+ name = "Food"
+ transString = "sainsburys"
+}
+
+Class Transaction {
+  date (string/date)
+  description (string)
+  amount (float)
+  type (Category)
+}
+
+e.g.
+
+Transaction {
+  date = "2014-09-25"
+  description = "SAINSBURYS S/MKTS HAMMERSMITH"
+  amount = -5.65
+  type = New Category(Food) //Originally null
+}
+
+//Takes in a whole list of Transactions and compares it against each Category the user has accumulated upto that point
+List<Transactions> fullCategorySearch(List<Transactions> l) {
+  List<Transactions> remainderList = l;
+  for (Category c : List<Category> allCat) {
+    List<Transactions> marked = singleCategorySearch(c, remainderList);
+    remove(marked, remainderList);
+  }
+}
+
+
+//Takes in a list of Transactions _l_, and returns all transactions specificed by Category _x_
+ List<Transactions singleCategorySearch(Category x, List<Transactions l) {
+
+   List<Transactions result = new List<Transactions();
+
+   //Iterate through all transactions
+   for (int i = 0; i < l.length(); i++) {
+     //If _x.transString_ exists as a substring in _l[i].description_
+     if (substringmatch(x.transString, l[i].description)) {
+       l[i].type = new Category(x.name);
+       result.add(l[i]);
+     }
+
+   }
+   return result;
+ }
