@@ -1,0 +1,76 @@
+ls - List files in current directory
+pwd - Print Working directory
+cp - Copy
+mv - Move
+
+
+
+GIT COMMANDS
+===================
+
+git pull - Pulls most recent files to your computer
+gitk - Shows  graphical version of git
+git commit -am "MESSAGE" - Commits your changes
+git status - Shows your recent changes
+git push - Pushes all your commits to the github server
+
+git checkout -f - Reverts your git folders to the latest git commit
+
+
+IF YOU MAKE A CHANGE e.g. ADD OR DELETE OR SIMPLY CHANGE A FILE YOU NEED TO : 
+
+git commit -am "USEFUL MESSAGE"
+git push
+
+29/09/2014,DEB,'11-08-21,11209962,BRICKLAYERS ARMS CD 9615 ,8.25,,692.40
+29/09/2014,DEB,'11-08-21,11209962,SELFSERVE TICKET CD 9615 ,5.10,,700.65
+22/09/2014,TFR,'11-08-21,11209962,M PATEL    20SEP14 117180 09619362 ,400.00,,
+1307.58
+
+
+UML STUFF / PsuedoCode
+=================================
+
+CLASSES
+=================================
+//Stores all the data for 1 Transaction
+Transaction Class
+ - date : (Date)
+ - description (String : 200 chars)
+ - amount (Float)
+ - type (Category)
+
+//Category stores 1 Category (Intialliy 4 - Food, Travel, Entertainment, Internet) 
+Category Class
+ - name (String)
+ - descString (String)
+
+Category (Food, "COSTA COFFEE AYLESBURY")
+Category (Food, "TESCO-STORES")
+Category (Travel " Ticket Machine")
+Category (Entertainment, "Cinema");
+
+METHODS
+=================================
+#Links Transaction to a Category
+
+getAllTransactionsDate(dateBegin, dateEnd)
+  GO THROUGH LIST OF ALL TRANSACTIONS CHECKING date IS BETWEEN args GIVEN
+
+getAllTransactionsType(Category)
+  GO THROUGH LIST OF ALL TRANSACTIONS CHECKING type IS THE SAME AS args GIVEN
+  
+
+getAllTransactionsAmount(amount)
+  GO THROUGH LIST OF ALL TRANSACTIONS CHECKING amount IS THE SAME AS args GIVEN
+
+Transaction (29/09/2014, "TESCO STORES", -5.09, null)
+
+-> Transaction (29/09/2014, "TESCO-STORES", -5.09, Food)
+
+List<Transactions> TransCatLink(List<Transactions>)
+  TESCO-STORES Category EXIST ALREADY?
+  YES : THEN SET Transactions.type ->  Category.name
+  NO : INTERNET
+
+
