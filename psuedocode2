@@ -73,4 +73,12 @@ List<Transactions> TransCatLink(List<Transactions>)
   YES : THEN SET Transactions.type ->  Category.name
   NO : INTERNET
 
+User Interactions (Front End) : 
+
+User Management (Login/Logout/SignUp/DeleteAccount/ChangePassword/ChangeEmail)
+Uploading Data (Upload csv file)
+Analytic Tools (Run Tools on existing data/Run tools on one csv file)
+Site Management (Report Faults/Check Terms and Conditions)
+
+
 
